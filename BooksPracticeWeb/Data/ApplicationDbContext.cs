@@ -1,0 +1,16 @@
+﻿using BooksPracticeWeb.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace BooksPracticeWeb.Data
+{
+    public class ApplicationDbContext : DbContext
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        {
+
+        }
+
+        public DbSet<Category> Categories { get; set; } 
+
+    }
+}
